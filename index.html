@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ======== Main Frame ======== -->
+    <div class="frame">
+        <!-- ======== Heading ======== -->
+        <h1 class="heading">Calculator</h1>
+        <!-- ======== Display Section ======== -->
+        <div class="display">
+            <input type="text" id="display" disabled>
+        </div>
+        <!-- ======== Button Section ======== -->
+        <div class="all-btn">
+
+            <!-- ======== Button Group 1 ======== -->
+            <div class="btn-group">
+                <button class="btn" value="" style="background-color: #EE964B; color: white;"
+                    onclick="display.value = ' '">C</button>
+                <button class="btn" value="" onclick="display.value = display.value.slice(0, -1);"><i
+                        class="ri-delete-back-2-line"></i></button>
+                <button class="btn" value="%" onclick="display.value +='%' ">%</button>
+                <button class="btn" value="/" style="background-color: #3777FF; color: white;"
+                    onclick="display.value += '/'"><i class="ri-divide-line"></i></button>
+            </div>
+            <!-- ======== Button Group 2 ======== -->
+            <div class="btn-group">
+                <button class="btn" value="7" onclick="display.value += '7'">7</button>
+                <button class="btn" value="8" onclick="display.value += '8'">8</button>
+                <button class="btn" value="9" onclick="display.value += '9'">9</button>
+                <button class="btn" value="*" style="background-color: #3777FF; color: white;"
+                    onclick="display.value += '*'"><i class="ri-close-line"></i></button>
+            </div>
+            <!-- ======== Button Group 3 ======== -->
+            <div class="btn-group">
+                <button class="btn" value="4" onclick="display.value += '4'">4</button>
+                <button class="btn" value="5" onclick="display.value += '5'">5</i></button>
+                <button class="btn" value="6" onclick="display.value += '6'">6</button>
+                <button class="btn" value="-" style="background-color: #3777FF; color: white; "
+                    onclick="display.value += '-'"><i class="ri-subtract-line"></i></button>
+            </div>
+            <!-- ======== Button Group 4 ======== -->
+            <div class="btn-group">
+                <button class="btn" value="1" onclick="display.value += '1'">1</button>
+                <button class="btn" value="2" onclick="display.value += '2'">2</button>
+                <button class="btn" value="3" onclick="display.value += '3'">3</button>
+                <button class="btn" value="+" style="background-color: #3777FF; color: white;"
+                    onclick="display.value += '+'"><i class="ri-add-line"></i></button>
+            </div>
+            <!-- ======== Button Group 5 ======== -->
+            <div class="btn-group">
+                <button class="btn" value="0" onclick="display.value += '0'">0</button>
+                <button class="btn" value="00" onclick="display.value += '00'">00</button>
+                <button class="btn" value="." style="font-size: larger" onclick="display.value += '.'">.</button>
+                <button class="btn" value="=" onclick="display.value = eval(display.value)"
+                    style="background-color: #EE964B; color: white;">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
